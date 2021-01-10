@@ -1,0 +1,30 @@
+.about_hero {
+  padding-top: 91px;
+  margin-bottom: 130px;
+  .__image_rapper {
+  }
+  .__text_holder {
+    max-width: 512px;
+    margin-right: 78px;
+    margin-left: auto;
+    .__description {
+      margin-top: 42px;
+      margin-bottom: 34px;
+      line-height: 1.88;
+      font-size: 19px;
+      font-weight: 300;
+      a {
+        font-weight: 600;
+      }
+    }
+    .__social_media_links {
+      display: flex;
+      align-items: center;
+      margin-top: 50px;
+      .__link {
+        margin-right: 16px;
+        display: block;
+      }
+    }
+  }
+}

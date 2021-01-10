@@ -1,0 +1,23 @@
+.about_skills {
+  margin-bottom: 132.5px;
+  align-items: flex-start;
+  &__heading {
+    margin-right: 80px;
+    line-height: 1;
+  }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    .__skill {
+      margin-right: 64px;
+      margin-bottom: 45px;
+      display: flex;
+      line-height: 1;
+      align-items: flex-end;
+      text-transform: capitalize;
+      .__bar_svg {
+        margin-left: 20px;
+      }
+    }
+  }
+}

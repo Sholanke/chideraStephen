@@ -1,0 +1,23 @@
+.app_nav {
+  padding-top: 50px;
+
+  .__logo {
+    font-weight: 700;
+    font-size: 105%;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+
+  .__links {
+    .link {
+      margin-left: 56px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.1px;
+
+      &.active {
+        color: var(--primary-color);
+      }
+    }
+  }
+}

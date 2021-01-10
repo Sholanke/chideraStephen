@@ -1,0 +1,15 @@
+@import "../../../styles/mixins";
+
+.home_hero {
+  padding-top: 91px;
+  margin-bottom: 167px;
+  
+  .__text_holder {
+    max-width: 640px;
+    margin-right: 91px;
+
+    h1 {
+      margin-bottom: 56px;
+    }
+  }
+}
