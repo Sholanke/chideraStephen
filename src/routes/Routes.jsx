@@ -3,6 +3,7 @@ import { HashRouter, Route } from "react-router-dom";
 import DefaultLayout from "../layouts/DefaultLayout";
 import { HomePage } from "../pages";
 import { AboutPage } from "../pages/About";
+import { BlogPage } from "../pages/Blog";
 
 export default function Routes() {
   return (
@@ -14,6 +15,7 @@ export default function Routes() {
         component={HomePage}
       />
       <RouteWithDefaultLayout exact path="/about" component={AboutPage} />
+      <RouteWithDefaultLayout exact path="/blog" component={BlogPage} />
     </HashRouter>
   );
 }
