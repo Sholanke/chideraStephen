@@ -4,18 +4,25 @@ import DefaultLayout from "../layouts/DefaultLayout";
 import { HomePage } from "../pages";
 import { AboutPage } from "../pages/About";
 import { BlogPage } from "../pages/Blog";
+import { ServicesPage } from "../pages/Services";
 
 export default function Routes() {
   return (
     <HashRouter>
       <RouteWithDefaultLayout
         exact
+        hasFooterSpacer
         path="/"
-        hasFooterSpacer={true}
         component={HomePage}
       />
       <RouteWithDefaultLayout exact path="/about" component={AboutPage} />
       <RouteWithDefaultLayout exact path="/blog" component={BlogPage} />
+      <RouteWithDefaultLayout
+        exact
+        hasFooterSpacer
+        path="/services"
+        component={ServicesPage}
+      />
     </HashRouter>
   );
 }

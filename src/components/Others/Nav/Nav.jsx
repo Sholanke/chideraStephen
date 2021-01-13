@@ -9,7 +9,7 @@ export default function Nav() {
         <p className="__logo">Chidera.</p>
         <div className="__links flex a-center">
           <NavLink exact to="/" className="link">
-            home
+            home.
           </NavLink>
           <NavLink exact to="/about" className="link">
             about me.
