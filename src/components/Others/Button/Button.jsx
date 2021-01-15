@@ -6,6 +6,7 @@ export default function Button({
   children,
   semanticType = "button",
   iconPosition = "right",
+  small,
   icon,
   to = "/",
 }) {
@@ -15,7 +16,10 @@ export default function Button({
   return (
     <>
       {semanticType === "button" && (
-        <button className="button_default" data-icon-position={iconPosition}>
+        <button
+          className={`button_default${small ? ` small` : ``}`}
+          data-icon-position={iconPosition}
+        >
           <ButtonContent {...buttonContentProps}>{children}</ButtonContent>
         </button>
       )}

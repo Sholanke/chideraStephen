@@ -74,6 +74,16 @@ body {
   background: var(--primary-color);
   width: fit-content;
 
+  &.small {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 47px;
+    padding-right: 47px;
+    text-transform: capitalize;
+    font-size: 18px;
+    letter-spacing: 0;
+  }
+
   .icon {
     content: "";
     height: 24px;
@@ -141,7 +151,7 @@ body {
   align-items: center;
   justify-content: center;
   transition: 0.3s;
-  z-index: 10;  
+  z-index: 10;
   p {
     transition: 0.5s;
   }
@@ -151,5 +161,54 @@ body {
     p {
       transform: translate(0, -100px);
     }
+  }
+}
+
+._base_input {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 20px;
+  margin-bottom: 32px;
+
+  .label {
+    position: absolute;
+    left: 0;
+    font-size: 16px;
+    top: 50%;
+    line-height: 1;
+    text-transform: capitalize;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: 0.3s ease-out;
+
+    &.position-top {
+      top: 0;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+  }
+
+  input,
+  ._input {
+    padding: 10px 0;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    letter-spacing: 1px;
+    transition: 0.3s ease-out;
+
+    &:focus {
+      border-bottom: 1px solid var(--primary-color);
+    }
+  }
+  ._input {
+    min-width: 100%; /* this is only if it is empty */
+    width: auto;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 1.7;
   }
 }

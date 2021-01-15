@@ -1,0 +1,15 @@
+.contact_form {
+  margin-top: 85px;
+  margin-right: auto;
+  margin-left: auto;
+
+  &__heading {
+    text-align: center;
+    padding-bottom: 52px;
+  }
+  .__main_form {
+    max-width: 540px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

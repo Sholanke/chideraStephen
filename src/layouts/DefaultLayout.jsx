@@ -5,7 +5,11 @@ import app from "../utils/app";
 import AppLoader from "./AppLoader";
 import { useLocation } from "react-router-dom";
 
-export default function DefaultLayout({ children, hasFooterSpacer }) {
+export default function DefaultLayout({
+  children,
+  hasFooterSpacer,
+  hasFooter = true,
+}) {
   const location = useLocation();
 
   useEffect(() => {
@@ -17,7 +21,7 @@ export default function DefaultLayout({ children, hasFooterSpacer }) {
       <AppLoader />
       <Nav />
       {children}
-      <Footer hasFooterSpacer={hasFooterSpacer} />
+      {hasFooter && <Footer hasFooterSpacer={hasFooterSpacer} />}
     </>
   );
 }
