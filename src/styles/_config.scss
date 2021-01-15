@@ -22,6 +22,18 @@ img {
   object-position: center;
 }
 
+input {
+  appearance: none;
+  &[type="number"] {
+    -moz-appearance: textfield;
+  }
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
 body {
   font-family: var(--font-family);
   background: var(--body-black);

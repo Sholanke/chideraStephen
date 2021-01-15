@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import BaseInput from "../../Others/BaseInput/BaseInput";
 import "./index.scss";
+import { SocialMediaLink } from "../../Others/Footer/Footer";
+import {
+  facebook,
+  twitter,
+  instagram,
+  linkedin,
+  youtube,
+} from "../../../assets/icons";
+import Button from "../../Others/Button/Button";
 
 export default function ContactForm() {
   return (
@@ -34,14 +43,14 @@ function Form() {
         onChange={handleContactFormChange}
       />
       <BaseInput
-        type="text"
+        type="email"
         name="email"
         placeholder="Email"
         value={contactData.email}
         onChange={handleContactFormChange}
       />
       <BaseInput
-        type="text"
+        type="number"
         name="phone"
         placeholder="Phone"
         value={contactData.phone}
@@ -64,7 +73,17 @@ function Form() {
           Write a description here
         </div>
       </div>
-      {/* <textarea name="description" value={contactData.description}></textarea> */}
+
+      <footer className="_flex j_between a_center">
+        <Button>Submit</Button>
+        <div>
+          <SocialMediaLink to="#" iconSrc={facebook} />
+          <SocialMediaLink to="#" iconSrc={twitter} />
+          <SocialMediaLink to="#" iconSrc={instagram} />
+          <SocialMediaLink to="#" iconSrc={linkedin} />
+          <SocialMediaLink to="#" iconSrc={youtube} />
+        </div>
+      </footer>
     </form>
   );
 }

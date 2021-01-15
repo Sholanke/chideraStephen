@@ -11,5 +11,13 @@
     max-width: 540px;
     margin-right: auto;
     margin-left: auto;
+
+    footer {
+      margin-top: 64px;
+      
+      .__link{
+        margin-right: 16px;
+      }
+    }
   }
 }
