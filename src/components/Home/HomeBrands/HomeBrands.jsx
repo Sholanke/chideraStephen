@@ -6,8 +6,11 @@ export default function HomeBrands() {
   return (
     <div className="app_container">
       <div className="app_container__wrapper home_brands">
+        <h1 className="home_brand__heading bold-46">Brands I’ve Worked with</h1>
         <HomeBrand>
-          <h1 className="home_brand__heading bold-46">Brands I’ve Worked with</h1>
+          <h1 className="home_brand__heading bold-46">
+            Brands I’ve Worked with
+          </h1>
         </HomeBrand>
         <HomeBrand />
         <HomeBrand />

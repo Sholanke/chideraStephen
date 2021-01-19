@@ -1,7 +1,13 @@
+@import "../../../styles/mixins";
+
 .app_footer {
   padding-top: 100px;
   padding-bottom: 100px;
-  
+
+  @include mobile {
+    display: block !important;
+  }
+
   &[data-has-footer-spacer="true"] {
     border-top: 1px solid var(--border-color);
   }
@@ -12,6 +18,9 @@
     }
   }
   .__social_media_links {
+    @include mobile {
+      margin-top: 100px;
+    }
     .__link {
       margin-left: 16px;
       height: 40px;

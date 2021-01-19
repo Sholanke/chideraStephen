@@ -1,6 +1,9 @@
+@import "../../../styles/mixins";
+
 .about_social_media {
   padding-top: 100px;
   padding-bottom: 120px;
+
   &__heading {
     width: fit-content;
     margin-right: auto;
@@ -12,11 +15,21 @@
     margin-left: auto;
     margin-top: 36px;
     margin-bottom: 56px;
+    @include mobile {
+      flex-wrap: wrap;
+      button {
+        margin-bottom: 18px;
+      }
+    }
   }
   .__posts {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
     .__post {
       background: var(--post-background);
       padding: 15px 18px 23px 18px;

@@ -1,7 +1,13 @@
+@import "../../../styles/mixins";
+
 .services_lists {
   display: flex;
   margin-top: 117px;
   margin-bottom: 130px;
+
+  @include mobile {
+    display: block;
+  }
 
   .__heading_container,
   .__services_holder {
@@ -10,6 +16,12 @@
   .__heading_container {
     max-width: 317px;
     margin-right: 80px;
+
+    @include mobile {
+      max-width: unset;
+      margin-right: 0;
+      margin-bottom: 100px;
+    }
 
     ._description {
       margin-top: 38px;
@@ -21,13 +33,27 @@
     grid-gap: 30px;
     grid-template-columns: 1fr 1fr;
     flex-shrink: 0;
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
     .__service {
       padding: 65px 48px 50px 48px;
       background: var(--post-background);
       border-radius: 8px;
 
+      @include mobile {
+        padding: 40px 20px;
+      }
+
       .__drawing {
         margin-bottom: 52px;
+
+        @include mobile {
+          margin-bottom: 22px;
+          svg {
+            width: 100px;
+          }
+        }
       }
       ._title {
         font-weight: 600;

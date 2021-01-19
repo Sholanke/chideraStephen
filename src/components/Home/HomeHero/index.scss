@@ -3,13 +3,35 @@
 .home_hero {
   padding-top: 91px;
   margin-bottom: 167px;
-  
+  position: relative;
+  @include mobile {
+    margin-top: 40px;
+  }
+
   .__text_holder {
     max-width: 640px;
     margin-right: 91px;
 
+    @include mobile {
+      position: relative;
+      z-index: 1;
+    }
     h1 {
       margin-bottom: 56px;
+    }
+  }
+  .__image_holder {
+    @include mobile {
+      position: absolute;
+      right: -40%;
+      opacity: 0.3;
+      margin-bottom: 100px;
+      top: 0;
+    }
+    img {
+      @include mobile {
+        width: 100%;
+      }
     }
   }
 }

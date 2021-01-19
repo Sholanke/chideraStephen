@@ -1,3 +1,5 @@
+@import "../../../styles/mixins";
+
 .contact_form {
   margin-top: 85px;
   margin-right: auto;
@@ -14,8 +16,17 @@
 
     footer {
       margin-top: 64px;
-      
-      .__link{
+
+      @include mobile {
+        flex-wrap: wrap;
+      }
+      .button_default {
+        @include mobile {
+          margin-bottom: 30px;
+        }
+      }
+
+      .__link {
         margin-right: 16px;
       }
     }

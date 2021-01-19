@@ -5,7 +5,7 @@ import { SocialMediaLink } from "../../Others/Footer/Footer";
 
 export default function AboutHero() {
   return (
-    <div className="app_conatiner">
+    <div className="app_container">
       <div className="app_container__wrapper about_hero _flex a_center">
         <div className="__image_rapper">
           <img src={heroAvatar} alt="" srcSet="" />

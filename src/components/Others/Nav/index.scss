@@ -1,3 +1,5 @@
+@import "../../../styles/mixins";
+
 .app_nav {
   padding-top: 50px;
 
@@ -7,17 +9,99 @@
     letter-spacing: 5px;
     text-transform: uppercase;
   }
+  ._ham_burger_menu {
+    display: none;
+    position: relative;
+    z-index: 6;
 
+    span {
+      display: block;
+      height: 2px;
+      background: #fff;
+      margin-bottom: 8px;
+      width: 30px;
+      transition: 0.3s ease-out;
+      animation-name: open;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      &:nth-child(2) {
+        margin-bottom: 0;
+      }
+    }
+    &[data-is-open="true"] {
+      span {
+        animation-name: close;
+        margin-bottom: 0 !important;
+      }
+    }
+    @include mobile {
+      display: unset;
+    }
+  }
   .__links {
+    @include mobile {
+      position: fixed;
+      background: var(--body-black);
+      flex-direction: column;
+      z-index: 5;
+      width: 90%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      bottom: 5%;
+      padding: 25px;
+      border-radius: 4px;
+      box-shadow: 0 0 0 200vh rgba(0, 0, 0, 0.651);
+      //hide by default
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.3s ease-out;
+
+      &[data-is-open="true"] {
+        //show when state changes
+        opacity: 1;
+        pointer-events: unset;
+      }
+    }
     .link {
       margin-left: 56px;
       font-size: 15px;
       font-weight: 600;
       letter-spacing: -0.1px;
 
+      @include mobile {
+        margin-bottom: 20px;
+        margin-left: 0;
+      }
+
       &.active {
         color: var(--primary-color);
       }
     }
+  }
+}
+
+@keyframes close {
+  50% {
+    height: 1px;
+    transform: rotate(0);
+  }
+  100% {
+    height: 1px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes open {
+  0% {
+    height: 1px;
+    transform: rotate(45deg);
+  }
+  50% {
+    height: 2px;
+    transform: rotate(45deg);
+  }
+  100% {
+    height: 2px;
+    transform: rotate(0);
   }
 }

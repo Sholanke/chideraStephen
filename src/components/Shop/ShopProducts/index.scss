@@ -1,7 +1,12 @@
+@import "../../../styles/mixins";
+
 .shop_products {
   column-count: 3;
   column-gap: 30px;
   margin-bottom: 100px;
+  @include mobile {
+    column-count: 1;
+  }
 }
 
 .shop_product {

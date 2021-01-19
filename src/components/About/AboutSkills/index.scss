@@ -1,9 +1,19 @@
+@import "../../../styles/mixins";
+
 .about_skills {
   margin-bottom: 132.5px;
   align-items: flex-start;
+
+  @include mobile {
+    flex-wrap: wrap;
+  }
+
   &__heading {
     margin-right: 80px;
     line-height: 1;
+    @include mobile {
+      margin-right: 0;
+    }
   }
   &__wrapper {
     display: flex;
@@ -15,8 +25,13 @@
       line-height: 1;
       align-items: flex-end;
       text-transform: capitalize;
+      @include mobile {
+        margin-right: 0;
+        line-height: 1.5;
+      }
       .__bar_svg {
         margin-left: 20px;
+        flex-shrink: 0;
       }
     }
   }

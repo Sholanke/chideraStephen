@@ -7,8 +7,8 @@ const fakeData = { title: "Why Use External It Support" };
 export default function BlogList() {
   return (
     <div className="app_container">
-      <div className="app_container__wrapper">
-        <div className="_flex">
+      <div className="app_container__wrapper blogs_list_wrapper">
+        <div className="_flex mini_nav">
           <InvertedButton>All</InvertedButton>
           <InvertedButton>Life Syle</InvertedButton>
           <InvertedButton>Travel</InvertedButton>

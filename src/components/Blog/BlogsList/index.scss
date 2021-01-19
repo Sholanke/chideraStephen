@@ -1,7 +1,27 @@
+@import "../../../styles/mixins";
+
+.blogs_list_wrapper {
+  .mini_nav {
+    @include mobile {
+      flex-wrap: wrap;
+      button {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
 .blogs_list {
   column-count: 3;
   column-gap: 30px;
   margin-top: 48px;
+
+  @include mobile {
+    column-count: 1;
+    column-gap: 30px;
+    margin-top: 48px;
+  }
+
   .blog {
     display: inline-block;
     width: 100%;
